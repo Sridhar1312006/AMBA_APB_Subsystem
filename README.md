@@ -16,14 +16,14 @@ A fully synthesizable, parameterizable AMBA 3 APB (Advanced Peripheral Bus) Mast
 ## 🏗️ Hardware Architecture & Interconnect
 The top-level wrapper interconnects the sequence controller (Master) and the peripheral memory block (Slave) over dedicated point-to-point buses.
 
-![RTL Schematic](APB_Sub/APB_RTL_Schematic.png)
+🔗 **[View Elaborated RTL Schematic Diagram](APB_Sub/APB_RTL_Schematic.png)**
 
 ---
 
 ## 🔬 Functional Verification & Timing Results
 Simulated on Vivado Simulator with a self-checking testbench covering single write/read transfers, wait-state handshake delays, and fault assertions.
 
-![Simulation Waveform](APB_Sub/APB%20Simulation.png)
+🔗 **[View Functional Simulation Waveform](APB_Sub/APB%20Simulation.png)**
 
 ### Key Transaction Milestones:
 1. **Write Transfer:** Driven to address `0x0002` with payload `0xDEADBEEF`. Master stalls for 4 wait cycles before asserting single-cycle `done`.
@@ -35,7 +35,7 @@ Simulated on Vivado Simulator with a self-checking testbench covering single wri
 ## 📊 FPGA Synthesis & Resource Utilization
 Synthesized targeting the Kintex-7 FPGA architecture (`xc7k70tfbv676-1`):
 
-![Resource Utilization](APB_Sub/resource_utilization.png)
+🔗 **[View Post-Synthesis Device & Utilization Snapshot](APB_Sub/resource_utilization.png)**
 
 | Resource | Master_inst | Slave_inst | Total Used | Available | Utilization (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
